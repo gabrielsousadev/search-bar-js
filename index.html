@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="./data.js" defer></script>
     <title>Search Bar</title>
 </head>
 <body>
     <div class="search-container">
         <div class="icon" onclick="searchBarClick()"></div>
         <div class="input">
-            <input type="text" placeholder="Search" id="my-search">
+            <input type="text" placeholder="Search" id="my-search" data-search>
         </div>
         <span class="clear" onclick="clearSearchBar()"></span>
     </div>
+    <div class="user-cards" data-user-cards-container></div>
+    <template data-user-template>
+        <div class="card">
+            <div class="header" data-header></div>
+            <div class="body" data-body></div>
+        </div>
+    </template>
     <script src="./searchBar.js"></script>
 </body>
 </html>
